@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/activems/logmein-client-callback",
   "dependencies": {
-    "logmein-client-verify": "~0.1.0",
+    "logmein-client-validation": "~0.1.0",
     "express": "~4.9.5"
   }
 }
