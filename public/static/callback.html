@@ -1,0 +1,42 @@
+<script type="text/javascript">
+
+// Get the query from the fragment 
+var query = location.hash.substring(1);
+
+// Save the query string parameters
+var params = {};
+var m;
+var regex = /([^&=]+)=([^&]*)/g;
+
+while (m = regex.exec(query)) {
+  params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+}
+
+// Send back the query to the server
+
+var request = new XMLHttpRequest();
+request.open('GET', window.location.protocol + '//' + 
+  window.location.host + '/catchtoken?' + query, true);
+
+request.onreadystatechange = function (e) {
+  if (request.readyState == 4) {
+    switch(request.status) {
+      case 200: // successful login
+       // Redirect the browser to location in the 'state' field
+	     window.location = params["state"];
+       return;
+	    case 498: // The token was invalid
+        alert('The provided token is invalid');
+        break;
+      case 403: // The access has been denied
+        alert('Access denied.');
+        break;
+      default: // Something really nasty happened ...
+	       alert('Unexpected status code: ' + request.status);
+         break;
+       }
+       window.location = "/";
+  }
+};
+request.send(null);
+</script>
