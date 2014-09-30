@@ -7,10 +7,10 @@ Running this code
 -------
 Before you start checking out any code, you can also try a live version of this project [here](https://bloggar.actisec.com).
 
-In order to run this make sure you have `npm` and `node` installed and execute:
+In order to run this make sure you have `node` as well as `npm` and `bower` installed and execute:
 
 ```bash
-$ npm install
+$ npm install && bower install
 ```
 Before starting running the application, make sure you modify the application's `client_id` in the `index.html` file. You may use one you already have, or obtain a new one from [our website]().
 

@@ -7,11 +7,11 @@
     <title>Welcome to Bloggar!</title>
 
     <!-- Bootstrap -->
-    <link href="libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- TODC Bootstrap theme -->
-    <link href="libs/todc-bootstrap/dist/css/todc-bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/todc-bootstrap/dist/css/todc-bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome -->
-    <link href="libs/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
  	<link href="css/style.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,7 +19,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="libs/logmein-webclient/lib/main.js"></script>
+    <script src="bower_components/logmein-webclient/lib/main.js"></script>
 	<script type="text/javascript">
 	var init = function() 
 	{
@@ -33,7 +33,7 @@
 		{
 			client_id:    "vr7N83Ekmti22JmAfOfkkSbntOORdWaZtB3hjyU2",
 		    redirect_uri: loc.protocol + '//' + loc.host + "/callback",
-		    scope:        "email",
+		    scope:        "profile",
 		    state:        "welcome"
 		});
 	}

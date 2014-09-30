@@ -20,7 +20,7 @@
     "todc-bootstrap": "~3.0.2",
     "bootstrap": "~3.2.0",
     "fontawesome": "~4.2.0",
-    "bootstrap-sass-official": "~3.2.0+2",
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "bootstrap-sass-official": "~3.2.0+2"
   }
 }
