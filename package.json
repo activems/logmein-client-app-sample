@@ -1,5 +1,5 @@
 {
-  "name": "logmein-client-callback",
+  "name": "logmein-client-app-sample",
   "version": "0.1.0",
   "description": "Example Node.js web service implementing the client callback for the OAuth2.0 implicit grant model",
   "main": "app.js",
