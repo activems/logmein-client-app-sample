@@ -1,0 +1,26 @@
+{
+  "name": "logmein-client-app-sample",
+  "version": "0.1.0",
+  "homepage": "https://github.com/activems/logmein-client-app-sample",
+  "authors": [
+    "ArturoBlas <arturoblas@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "logmein-webclient": "*",
+    "skeleton": "*",
+    "todc-bootstrap": "~3.0.2",
+    "bootstrap": "~3.2.0",
+    "fontawesome": "~4.2.0",
+    "bootstrap-sass-official": "~3.2.0+2",
+    "jquery": "~2.1.1"
+  }
+}

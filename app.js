@@ -7,7 +7,7 @@ var express = require('express'),
 	nunjucksEnv = new nunjucks.Environment( 
 		new nunjucks.FileSystemLoader(path.join(__dirname, '/public/templates' )));
 
-var logmein = require('logmein-implicit-server'),
+var logmein = require('logmein-webclient-be'),
 	client = logmein();
 
 app.use(express.static(__dirname)),

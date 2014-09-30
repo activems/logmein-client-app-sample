@@ -86,9 +86,9 @@ From the web application's perspective this means that:
     
 You may choose to use the [LogmeIn RESTful API](), but in order to make it easier this sample makes use of two components that you may include in your projects:
 
-*[logmein-implicit-client](https://github.com/activems/logmein-implicit-client): A JavaScript library that enables your client-side code to interface the authentication server. 
+* [logmein-webclient](https://github.com/activems/logmein-webclient): A JavaScript library that enables your client-side code to interface the authentication server. 
 
-*[logmein-implicit-server](https://github.com/activems/logmein-implicit-server): A Node.js module that enables your web application to validate the `access_token` and retrieve resources from the .
+* [logmein-webclient-be](https://github.com/activems/logmein-webclient-be): A Node.js module that enables your web application to validate the `access_token` and retrieve resources from the .
 
 > *NOTE*: You will find some shared functionality between these components but the authentication request can only be triggered by the client.
 
@@ -97,10 +97,10 @@ Implementation details
 
 The web application entry point is `index.html`. The important bits here are:
 
-* Import `logmein-implicit-client`:
+* Import `logmein-webclient`:
 
 ```html
-<script src="libs/logmein-client-auth/lib/main.js"></script>
+<script src="libs/logmein-webclient/lib/main.js"></script>
 ```
 
 * Implement a JavaScript function to trigger the authentication request:
@@ -110,7 +110,7 @@ The web application entry point is `index.html`. The important bits here are:
 var init = function() 
 {
     // Instantiate the authentication client
-    var client = new LogmeinImplicitClient();
+    var client = new LogmeinWeblient();
 
     var loc = window.location;
 
@@ -126,10 +126,10 @@ var init = function()
 </script>
 ```
 
-    * Here the `client_id` should be a valid one.
-    * The `redirect_uri` points to the callback on the server which will be explained later.
-    *`scope` defines what data from the user your application is requesting. In this case, the access will be granted to the `profile` realm which provides access to the user identification data.
-    *`state` is used in this sample to let the callback know where to point the browser if the user grants access. In this case this points to the `welcome` endpoint but it's up to your implementation how to use it.
+ * Here the `client_id` should be a valid one.
+ * The `redirect_uri` points to the callback on the server which will be explained later.
+ *`scope` defines what data from the user your application is requesting. In this case, the access will be granted to the `profile` realm which provides access to the user identification data.
+ *`state` is used in this sample to let the callback know where to point the browser if the user grants access. In this case this points to the `welcome` endpoint but it's up to your implementation how to use it.
 
 * In this sample, the authentication request is triggered by a HTML `button` component `onclick` event:
 
@@ -148,10 +148,10 @@ The token validation endpoint *MUST* validate the provided `access_token`, failu
 
 In this sample, the validation is performed as follows:
 
-* Import the `logmein-implicit-server` module and instantiate the client:
+* Import the `logmein-webclient-be` module and instantiate the client:
 
 ```javascript
-var logmein = require('logmein-implicit-server'),
+var logmein = require('logmein-webclient-be'),
     client = logmein();
 ```
 
