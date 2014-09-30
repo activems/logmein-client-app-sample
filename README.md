@@ -3,6 +3,7 @@ LogmeIn OAuth2.0 client sample web application
 
 [ ![Codeship Status for activems/logmein-client-app-sample](https://codeship.io/projects/26dd7da0-2b17-0132-e579-7ef17201ec9e/status)](https://codeship.io/projects/38487)
 
+
 This project provides a sample Node.js web application that illustrates how to integrate LogmeIn multi-factor authentication on your website.
 
 Running this code
