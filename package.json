@@ -4,7 +4,8 @@
   "description": "Example Node.js web service implementing the client callback for the OAuth2.0 implicit grant model",
   "main": "app.js",
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/activems/logmein-client-callback",
   "dependencies": {
+    "bower": "",
     "logmein-webclient-be": "",
     "express": "~4.9.5",
     "session": "~0.1.0",
