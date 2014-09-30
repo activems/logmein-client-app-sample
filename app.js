@@ -138,8 +138,9 @@ app.get("/logout", function(request, response)
 	redirectToHome(request, response);
 });
 
-// Start listening
-app.listen(8000);
+var port = Number(process.env.PORT || 8000);
 
-// Put a friendly message on the terminal
-console.log("Server running at http://localhost:8000/");
+// Start listening
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
