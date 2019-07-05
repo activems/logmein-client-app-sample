@@ -31,6 +31,6 @@
     "express-session": "~1.8.2",
     "nodejs-gravatar": "~1.0.2",
     "crypto": "0.0.3",
-    "nunjucks": "~1.0.7"
+    "nunjucks": "~2.4.3"
   }
 }
